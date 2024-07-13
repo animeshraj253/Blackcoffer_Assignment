@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/explore_menu_icon"
+        android:id="@+id/navExplore"
+        android:title="Explore" />
+    <item
+        android:icon="@drawable/connection_menu_icon"
+        android:id="@+id/navConnections"
+        android:title="Connections" />
+    <item
+        android:icon="@drawable/chat_menu_icon24"
+        android:id="@+id/navChat"
+        android:title="Chat" />
+    <item
+        android:icon="@drawable/contact_menu_icon"
+        android:id="@+id/navContacts"
+        android:title="Contacts" />
+    <item
+        android:icon="@drawable/groups_menu_icon"
+        android:id="@+id/navGroups"
+        android:title="Groups" />
+</menu>

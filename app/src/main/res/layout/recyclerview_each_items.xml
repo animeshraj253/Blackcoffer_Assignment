@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="@dimen/_10sdp"
+
+    >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <!-- CardView -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/frame_item"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_marginLeft="38dp">
+
+                <!-- Card content here -->
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <!-- Name -->
+                    <TextView
+                        android:id="@+id/nameTXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_42sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/upper_border"
+                        android:textSize="@dimen/_15sdp"
+                        android:textAllCaps="true"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Animesh Raj" />
+
+                    <!-- Location -->
+                    <TextView
+                        android:id="@+id/locationTXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_42sdp"
+                        android:textColor="@color/secondaryTextColor"
+                        android:fontFamily="sans-serif-medium"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_11sdp"
+                        android:text="Location" />
+
+                    <!-- Distance -->
+                    <TextView
+                        android:id="@+id/distanceTXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_42sdp"
+                        android:textColor="@color/gray"
+                        android:text="Distance" />
+
+                    <!-- Progress Bar -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="@dimen/_42sdp"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:gravity="center"
+
+                        >
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_8sdp"
+                            android:progressTint="@color/gray"
+                            android:progressBackgroundTint="@color/light_gray"
+                            android:max="100"/>
+                        <TextView
+                            android:id="@+id/profileScoreTXT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gray"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:text="Profile Score - 10 %"
+                            />
+                    </LinearLayout>
+
+
+                    <!-- Text | Text | Text -->
+                    <TextView
+                        android:id="@+id/activityTXT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:text="Text | Text | Text"
+                        android:textColor="@color/upper_border"
+                        android:fontFamily="sans-serif-medium"
+                        />
+
+                    <!-- Status -->
+                    <TextView
+                        android:id="@+id/statusTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+
+                        android:textColor="@color/upper_border"
+                        android:textStyle="bold"
+                        android:text="Status" />
+
+                </LinearLayout>
+
+                <!-- +Invite Button -->
+                <Button
+                    android:id="@+id/inviteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:backgroundTint="@color/white"
+                    android:text="+INVITE"
+                    android:textColor="@color/black" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:cardBackgroundColor="@color/silver">
+
+                <!-- Text inside the Square Box -->
+                <TextView
+                    android:id="@+id/cardNameTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="AB"
+                    android:textColor="@color/Prussian_Blue"
+                    android:textSize="@dimen/_24sdp"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/profileImageItem"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+</LinearLayout>

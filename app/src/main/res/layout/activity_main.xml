@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_44sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:background="@color/upper_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Side Bar Icon -->
+        <ImageView
+            android:id="@+id/sideBarOpener"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="match_parent"
+            android:src="@drawable/side_bar_icon"
+            android:layout_marginStart="@dimen/_5sdp"
+            />
+
+<!--        Linear layout for name and location-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/nameTxtMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Howdy Animesh Raj!!"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                />
+
+            <TextView
+                android:id="@+id/locationTxtMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/location_icon"
+                android:text="Asura Kalan Khola"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                />
+        </LinearLayout>
+
+
+<!--        Linearlayout for refine-->
+        <LinearLayout
+            android:id="@+id/refinedOpenMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+
+            >
+            <ImageView
+                android:id="@+id/rImageMain"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/check_list_icon"
+                android:layout_gravity="center"
+
+                />
+            <TextView
+                android:id="@+id/rrTxtMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Refine"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+<!--    Search bar-->
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <!-- Search EditText -->
+        <EditText
+            android:id="@+id/searchEditTextMain"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_weight="8"
+            android:background="@drawable/edittext"
+            android:drawableStart="@drawable/search_icon"
+            android:hint="Search..."
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/_4sdp" />
+
+        <!-- Filter button -->
+        <ImageButton
+            android:id="@+id/filterBtnMain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:backgroundTint="@color/white"
+            android:scaleType="fitCenter"
+            android:src="@drawable/filter_icon" />
+
+    </LinearLayout>
+
+<!--    fragment switcher : note : replace it with tab layout-->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:background="@color/secondaryColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/personalFragmentMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal"
+            android:layout_weight="1"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/servicesFragmentMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Services"
+            android:layout_weight="1"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/gray" />
+        <TextView
+            android:id="@+id/businessFragmentMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Businesses"
+            android:layout_weight="1"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/gray" />
+    </LinearLayout>
+
+<!--    main section-->
+    <ScrollView
+        android:id="@+id/scrollViewMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_4sdp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reyclerViewMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+    </ScrollView>
+
+<!--    bottom navigation bar-->
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavBarMain"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_58sdp"
+            android:background="@color/white"
+            app:itemTextAppearanceInactive="@color/gray"
+            app:itemBackground="@color/white"
+
+            app:itemTextColor="@color/upper_border"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_nav_menu" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
